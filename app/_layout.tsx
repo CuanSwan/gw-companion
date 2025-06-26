@@ -3,15 +3,28 @@ import { Tabs } from "expo-router";
 export default function RootLayout() {
   return <Tabs 
   screenOptions={{
-    headerStyle:{
-      backgroundColor: '#f4511e',
+    headerShown: false,
+    tabBarStyle: {
+      backgroundColor: '#a01316',
     },
-    headerTintColor: '#fff',
-    headerTitleStyle: {
-      fontWeight: 'bold',
-    }
+    tabBarLabelStyle: {
+      color: 'white',
+    },
+    tabBarActiveBackgroundColor:'darkred',
   }}>
-    <Tabs.Screen name="index"/>
-    <Tabs.Screen name="details"/>
+    <Tabs.Screen name="(home)" 
+    options={{
+        title: 'Home',
+        tabBarIcon: () => null,
+        tabBarLabelPosition: 'beside-icon'
+      }
+    }/>
+    <Tabs.Screen name="(settings)"
+    options={{
+        title: 'Settings',
+        tabBarIcon: () => null,
+        tabBarLabelPosition: 'beside-icon'
+    }}
+    />
   </Tabs>;
 }
