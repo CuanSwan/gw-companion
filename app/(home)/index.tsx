@@ -1,9 +1,11 @@
 import IonIcons from "@expo/vector-icons/Ionicons";
 import { Link } from "expo-router";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
+import { GlobalStyles } from "../../styles/GlobalStyles";
 
 const HomeScreen = () => {
+  const styles = GlobalStyles
   return (
     <View style={styles.body}>
       <Link style={styles.link} href="./news">
@@ -45,40 +47,5 @@ const HomeScreen = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  body: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    gap: 30,
-    margin: "auto",
-    width: "90%",
-  },
-  icons: {
-    backgroundColor: "#a01316",
-    color: "white",
-    marginHorizontal: 10,
-  },
-  bar: {
-    width: "100%",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    height: "100%",
-    backgroundColor: "#a01316",
-    borderRadius: 4,
-    elevation: 6,
-  },
-  text: {
-    color: "white",
-    fontSize: 18,
-    textAlign: "center"
-  },
-  link: {
-    height: "12%",
-    width: "100%",
-  },
-});
 
 export default HomeScreen;
